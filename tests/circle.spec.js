@@ -30,7 +30,8 @@ describe('#circle', () => {
 
     const circleEntries = Object.entries(circle(1));
     assert.deepStrictEqual(circleEntries.length, 3);
-    // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
+
+    assert.deepStrictEqual(circle(), undefined);
     // Teste que a função retorna, dentro de um objeto, a circunferência correta para um círculo de raio 2.
     // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
