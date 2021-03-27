@@ -57,7 +57,6 @@ describe('#createMenu', () => {
     // ```
     const objetoRetornado = createMenu(); // Retorno: { fetchMenu: () => {}, ... }
     assert.strictEqual(typeof objetoRetornado === 'object', true);
-    console.log(objetoRetornado);
     // ```
     // TESTE 2: Verifique que, dado que a função createMenu foi chamada com o objeto: `{ food: {}, drink: {} }`,
     // verifique que 'objetoRetornado.fetchMenu()' retorna um objeto cujas chaves são somente `food` e `drink`.
@@ -78,6 +77,11 @@ describe('#createMenu', () => {
     // ```
     // const objetoRetornado = createMenu(objetoQualquer);
     // objetoRetornado.consumption // Retorno: []
+    const objetoRetornado3 = createMenu({
+      food: { coxinha: 3.90, sanduiche: 9.90 },
+      drinks: { agua: 3.90, cerveja: 6.90 },
+    });
+    assert.deepStrictEqual(objetoRetornado3.consumption, []);
     // ```
     // Agora faça o PASSO 2 no arquivo `src/restaurant.js`.
     // --------------------------------------------------------------------------------------
