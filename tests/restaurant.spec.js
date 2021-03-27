@@ -3,6 +3,7 @@
 /* eslint-disable no-unused-vars */
 
 const assert = require('assert');
+const { order } = require('../src/restaurant');
 const createMenu = require('../src/restaurant');
 
 /*
@@ -91,6 +92,8 @@ describe('#createMenu', () => {
     // const objetoRetornado = createMenu(objetoQualquer);
     // objetoRetornado.order("coxinha");
     // objetoRetornado.consumption // Retorno: ["coxinha"]
+    objetoRetornado3.order('coxinha');
+    assert.deepStrictEqual(objetoRetornado3.consumption, ['coxinha']);
     // ```
     // Agora faça o PASSO 3 no arquivo `src/restaurant.js`.
     // --------------------------------------------------------------------------------------
