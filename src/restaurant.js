@@ -82,10 +82,27 @@ function orderFromMenu(request) {
   this.consumption.push(request);
 }
 
+function generatePayment() {
+  let billAmount = 0;
+  const tax = 0.1;
+  const myMenu = this.fetchMenu();
+  for (let i = 0; i < this.consumption.length; i += 1) {
+    const consumptionItem = this.consumption[i];
+    if (myMenu.food[consumptionItem]) {
+      billAmount += myMenu.food[consumptionItem];
+    }
+    if (myMenu.drinks[consumptionItem]) {
+      billAmount += myMenu.drinks[consumptionItem];
+    }
+  }
+  return parseFloat((billAmount * (1 + tax)).toFixed(2));
+}
+
 const createMenu = (obj) => ({
   consumption: [],
   fetchMenu: () => obj,
   order: orderFromMenu,
+  pay: generatePayment,
 });
 
 module.exports = createMenu;
