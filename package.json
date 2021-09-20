@@ -1,14 +1,10 @@
 {
-  "name": "sd-010-b-project-js-unit-tests",
+  "name": "js-unit-tests",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "jest",
     "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json . --ext .js, .jsx"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/betrybe/ssd-0x-block8-project-js-unit-test.git"
   },
   "keywords": [
     "javascript",
@@ -16,12 +12,8 @@
     "assert",
     "jest"
   ],
-  "author": "Jean Vasconcelos",
+  "author": "Lucas Martins da Silva",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/betrybe/sd-0x-block8-project-js-unit-test/issues"
-  },
-  "homepage": "https://github.com/betrybe/sd-0x-block8-project-js-unit-test#readme",
   "devDependencies": {
     "eslint": "6.8.0",
     "eslint-config-airbnb": "18.2.0",
